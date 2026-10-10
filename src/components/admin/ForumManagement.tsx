@@ -1,1 +1,1 @@
-export function ForumManagement() { return <section>Forum management</section>; }
+export { ForumList as ForumManagement } from "./forum/ForumList";

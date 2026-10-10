@@ -1,1 +1,1 @@
-export function ProductTable() { return <section>Product table</section>; }
+export { ProductList as ProductTable } from "./products/ProductList";

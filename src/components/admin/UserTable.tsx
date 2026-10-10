@@ -1,1 +1,1 @@
-export function UserTable() { return <section>User table</section>; }
+export { UserList as UserTable } from "./users/UserList";

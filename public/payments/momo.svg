@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#A50064"/>
+  <!-- Top decorative cute ears/accent -->
+  <path d="M22 14c-2.8 0-5 2.2-5 5v3h10v-3c0-2.8-2.2-5-5-5zM42 14c-2.8 0-5 2.2-5 5v3h10v-3c0-2.8-2.2-5-5-5z" fill="#C81E78"/>
+  <!-- Outer rounded boxes for the two "M"s -->
+  <rect x="13" y="19" width="18" height="26" rx="9" fill="#FFFFFF"/>
+  <rect x="16.5" y="22.5" width="11" height="19" rx="5.5" fill="#A50064"/>
+  <circle cx="22" cy="32" r="3.2" fill="#FFFFFF"/>
+  
+  <rect x="33" y="19" width="18" height="26" rx="9" fill="#FFFFFF"/>
+  <rect x="36.5" y="22.5" width="11" height="19" rx="5.5" fill="#A50064"/>
+  <circle cx="42" cy="32" r="3.2" fill="#FFFFFF"/>
+
+  <!-- Brand text below for ultra clarity -->
+  <text x="32" y="55" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="9" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">momo</text>
+</svg>

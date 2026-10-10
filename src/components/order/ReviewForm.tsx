@@ -1,1 +1,1 @@
-export function ReviewForm() { return <form>Review form</form>; }
+export { ReviewOrderModal as ReviewForm } from "@/components/orders/ReviewOrderModal";

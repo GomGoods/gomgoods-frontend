@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <!-- VNPAY symbol / text -->
+  <text x="11" y="36" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="14" fill="#005BAA" letter-spacing="-0.5">VN</text>
+  <text x="31" y="36" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="14" fill="#ED1C24" letter-spacing="-0.5">PAY</text>
+  <!-- Mini star accent -->
+  <polygon points="56,22 57,25 60,26 57,27 56,30 55,27 52,26 55,25" fill="#FBBF24"/>
+  <rect x="14" y="42" width="36" height="5" rx="2.5" fill="#ED1C24" opacity="0.15"/>
+  <text x="32" y="46" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="5" fill="#ED1C24" text-anchor="middle" letter-spacing="1">QR CODE</text>
+</svg>

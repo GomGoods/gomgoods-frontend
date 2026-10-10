@@ -1,1 +1,1 @@
-export function OrderDetail() { return <section>Order detail</section>; }
+export { OrderDetailView as OrderDetail } from "@/components/orders/OrderDetailView";
