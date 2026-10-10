@@ -1,1 +1,1 @@
-export function CampaignManagement() { return <section>Campaign management</section>; }
+export { CampaignList as CampaignManagement } from "./campaigns/CampaignList";

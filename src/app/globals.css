@@ -5,11 +5,58 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-surface: var(--surface);
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-inverse-surface: var(--inverse-surface);
+  --color-inverse-on-surface: var(--inverse-on-surface);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-surface-tint: var(--surface-tint);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-inverse-primary: var(--inverse-primary);
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--on-secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary: var(--on-tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+  --color-error-container: var(--error-container);
+  --color-on-error-container: var(--on-error-container);
+  --color-primary-fixed: var(--primary-fixed);
+  --color-primary-fixed-dim: var(--primary-fixed-dim);
+  --color-on-primary-fixed: var(--on-primary-fixed);
+  --color-on-primary-fixed-variant: var(--on-primary-fixed-variant);
+  --color-secondary-fixed: var(--secondary-fixed);
+  --color-secondary-fixed-dim: var(--secondary-fixed-dim);
+  --color-on-secondary-fixed: var(--on-secondary-fixed);
+  --color-on-secondary-fixed-variant: var(--on-secondary-fixed-variant);
+  --color-tertiary-fixed: var(--tertiary-fixed);
+  --color-tertiary-fixed-dim: var(--tertiary-fixed-dim);
+  --color-on-tertiary-fixed: var(--on-tertiary-fixed);
+  --color-on-tertiary-fixed-variant: var(--on-tertiary-fixed-variant);
   --color-background: var(--background);
+  --color-on-background: var(--on-background);
+  --color-surface-variant: var(--surface-variant);
+
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-sans, Inter, sans-serif);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-sans, Inter, sans-serif);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -32,89 +79,209 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Semantic Brand Tokens */
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-hover: var(--brand-blue-hover);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-yellow-hover: var(--brand-yellow-hover);
+  --color-brand-coral: var(--brand-coral);
+  --color-brand-coral-hover: var(--brand-coral-hover);
+  --color-brand-green: var(--brand-green);
+  --color-brand-green-hover: var(--brand-green-hover);
+  --color-brand-dark: var(--brand-dark);
+
+  --radius-sm: 0.25rem;
+  --radius-DEFAULT: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 0.875rem;
+  --radius-full: 9999px;
+  --brand-accent: #F4B942;
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* Warm Collector Marketplace Theme Tokens — Refined Light Palette */
+  --surface: #FFFFFF;
+  --surface-dim: #EDE8DE;
+  --surface-bright: #FDFCFA;
+  --surface-container-lowest: #FFFFFF;
+  --surface-container-low: #F7F4EE;
+  --surface-container: #F2EEE5;
+  --surface-container-high: #EBE6DC;
+  --surface-container-highest: #E5E0D5;
+  --on-surface: #20243A;
+  --on-surface-variant: #686B76;
+  --inverse-surface: #20243A;
+  --inverse-on-surface: #F5F2EA;
+  --outline: #9C978E;
+  --outline-variant: #DDD8CE;
+  --surface-tint: #365F9D;
+  --primary: #365F9D;
+  --on-primary: #FFFFFF;
+  --primary-container: #294F89;
+  --on-primary-container: #FFFFFF;
+  --inverse-primary: #86A8DD;
+  --secondary: #4A5F7D;
+  --on-secondary: #FFFFFF;
+  --secondary-container: #DEE4EC;
+  --on-secondary-container: #1C2D44;
+  --tertiary: #F4B942;
+  --on-tertiary: #FFFFFF;
+  --tertiary-container: #FDF3DF;
+  --on-tertiary-container: #7A5200;
+  --error: #EB5757;
+  --on-error: #FFFFFF;
+  --error-container: #FDE8E5;
+  --on-error-container: #7A1F13;
+  --primary-fixed: #DDE7F5;
+  --primary-fixed-dim: #BFD2EC;
+  --on-primary-fixed: #122035;
+  --on-primary-fixed-variant: #223758;
+  --secondary-fixed: #DFE5ED;
+  --secondary-fixed-dim: #C2CDDC;
+  --on-secondary-fixed: #141E2B;
+  --on-secondary-fixed-variant: #2A3849;
+  --tertiary-fixed: #FDEFCC;
+  --tertiary-fixed-dim: #F9DE96;
+  --on-tertiary-fixed: #352200;
+  --on-tertiary-fixed-variant: #664300;
+  --background: #FAF8F3;
+  --on-background: #20243A;
+  --surface-variant: #E5E0D5;
+  --brand-accent: #F4B942;
+
+  /* Semantic Brand Tokens (Light) */
+  --brand-blue: #4A8BFF;
+  --brand-blue-hover: #3A7BEF;
+  --brand-yellow: #F4B942;
+  --brand-yellow-hover: #E2A835;
+  --brand-coral: #EB5757;
+  --brand-coral-hover: #D94646;
+  --brand-green: #4EB57B;
+  --brand-green-hover: #3DA56B;
+  --brand-dark: #20243A;
+
+  /* Shadcn variables mapped to theme */
+  --foreground: #20243A;
+  --card: #FFFFFF;
+  --card-foreground: #20243A;
+  --popover: #FFFFFF;
+  --popover-foreground: #20243A;
+  --primary-foreground: #FFFFFF;
+  --secondary-foreground: #20243A;
+  --muted: #F2EEE5;
+  --muted-foreground: #686B76;
+  --accent: #F2EEE5;
+  --accent-foreground: #20243A;
+  --destructive: #EB5757;
+  --destructive-foreground: #FFFFFF;
+  --border: #DDD8CE;
+  --input: #DDD8CE;
+  --ring: #365F9D;
+  --radius: 0.5rem;
+  --sidebar: #FAF8F3;
+  --sidebar-foreground: #20243A;
+  --sidebar-primary: #365F9D;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F2EEE5;
+  --sidebar-accent-foreground: #20243A;
+  --sidebar-border: #DDD8CE;
+  --sidebar-ring: #365F9D;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Warm Collector Marketplace Dark Mode Tokens — Charcoal/Navy/Warm White */
+  --surface: #1E1E28;
+  --surface-dim: #15151E;
+  --surface-bright: #272734;
+  --surface-container-lowest: #12121A;
+  --surface-container-low: #181822;
+  --surface-container: #1E1E28;
+  --surface-container-high: #242431;
+  --surface-container-highest: #2C2C3A;
+  --on-surface: #F5F2EA;
+  --on-surface-variant: #B9B7C0;
+  --inverse-surface: #FAF8F3;
+  --inverse-on-surface: #15151E;
+  --outline: #9B98AC;
+  --outline-variant: #5E5B6E;
+  --surface-tint: #4A8BFF;
+  --primary: #4A8BFF;
+  --on-primary: #FFFFFF;
+  --primary-container: #203B6B;
+  --on-primary-container: #E2EDFF;
+  --inverse-primary: #365F9D;
+  --secondary: #A0B2C7;
+  --on-secondary: #131E2B;
+  --secondary-container: #283748;
+  --on-secondary-container: #D7E1EB;
+  --tertiary: #F4B942;
+  --on-tertiary: #3E2900;
+  --tertiary-container: #5E4200;
+  --on-tertiary-container: #FFE299;
+  --error: #EB6B5E;
+  --on-error: #450B04;
+  --error-container: #64140C;
+  --on-error-container: #FFDAD4;
+  --primary-fixed: #203B6B;
+  --primary-fixed-dim: #16284B;
+  --on-primary-fixed: #E2EDFF;
+  --on-primary-fixed-variant: #4A8BFF;
+  --secondary-fixed: #283748;
+  --secondary-fixed-dim: #1B2633;
+  --on-secondary-fixed: #D7E1EB;
+  --on-secondary-fixed-variant: #A0B2C7;
+  --tertiary-fixed: #5E4200;
+  --tertiary-fixed-dim: #432E00;
+  --on-tertiary-fixed: #FFE299;
+  --on-tertiary-fixed-variant: #F4B942;
+  --background: #15151E;
+  --on-background: #F5F2EA;
+  --surface-variant: #272734;
+  --brand-accent: #F4B942;
+
+  /* Semantic Brand Tokens (Dark) */
+  --brand-blue: #4A8BFF;
+  --brand-blue-hover: #6EA4FF;
+  --brand-yellow: #F4B942;
+  --brand-yellow-hover: #F8CB6E;
+  --brand-coral: #EB6B5E;
+  --brand-coral-hover: #F0857A;
+  --brand-green: #4EB57B;
+  --brand-green-hover: #68C490;
+  --brand-dark: #F5F2EA;
+
+  /* Shadcn variables mapped to dark mode */
+  --foreground: #F5F2EA;
+  --card: #1E1E28;
+  --card-foreground: #F5F2EA;
+  --popover: #1E1E28;
+  --popover-foreground: #F5F2EA;
+  --primary-foreground: #FFFFFF;
+  --secondary-foreground: #F5F2EA;
+  --muted: #272736;
+  --muted-foreground: #B9B7C0;
+  --accent: #272736;
+  --accent-foreground: #F5F2EA;
+  --destructive: #EB6B5E;
+  --destructive-foreground: #FFFFFF;
+  --border: #5E5B6E;
+  --input: #5E5B6E;
+  --ring: #4A8BFF;
+  --sidebar: #15151E;
+  --sidebar-foreground: #F5F2EA;
+  --sidebar-primary: #4A8BFF;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #1E1E28;
+  --sidebar-accent-foreground: #F5F2EA;
+  --sidebar-border: #5E5B6E;
+  --sidebar-ring: #4A8BFF;
 }
 
 @layer base {
@@ -122,9 +289,211 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
   html {
     @apply font-sans;
+  }
+}
+
+@layer utilities {
+  /* Typography scale */
+  .text-headline-xl {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    letter-spacing: -0.02em;
+  }
+  @media (min-width: 768px) {
+    .text-headline-xl {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+  }
+
+  .text-headline-lg {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+    letter-spacing: -0.01em;
+  }
+  @media (min-width: 768px) {
+    .text-headline-lg {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  .text-headline-md {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+  }
+
+  .text-headline-sm {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.75rem;
+  }
+
+  .text-body-lg {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+
+  .text-body-md {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+  }
+
+  .text-body-sm {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1rem;
+  }
+
+  .text-label-lg {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+  }
+
+  .text-label-md {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1rem;
+  }
+
+  .text-label-sm {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 0.625rem;
+    font-weight: 600;
+    line-height: 0.875rem;
+  }
+
+  /* Responsive Fluid Grid Layout */
+  .recommerce-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  @media (min-width: 768px) {
+    .recommerce-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .recommerce-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .recommerce-grid {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
+  /* Tactile Ambient Elevation */
+  .elevation-ambient {
+    box-shadow: 0 3px 14px -2px rgba(36, 36, 58, 0.06), 0 1px 4px -1px rgba(36, 36, 58, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .elevation-ambient:hover {
+    box-shadow: 0 6px 20px -3px rgba(36, 36, 58, 0.10), 0 2px 6px -1px rgba(36, 36, 58, 0.05);
+  }
+
+  /* GomGoods Signature Brand Slogan Font */
+  .font-slogan {
+    font-family: 'Playfair Display', ui-serif, Georgia, Cambria, 'Times New Roman', serif;
+  }
+
+  /* Auth custom enhancements */
+  .custom-pattern {
+    background-image: radial-gradient(rgba(237, 90, 75, 0.09) 1.2px, transparent 1.2px);
+    background-size: 20px 20px;
+  }
+
+  .shadow-clay {
+    box-shadow: 0 6px 0 0 #b83225;
+  }
+
+  .shadow-soft-card {
+    box-shadow: 0 10px 30px -5px rgba(237, 90, 75, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Hidden scrollbar for horizontal scroll containers */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Auction Start Slash Banner Animations */
+  @keyframes auction-slash {
+    0% { transform: translateX(100%) scale(0.85); opacity: 0; }
+    15% { transform: translateX(-5%) scale(1.02); opacity: 1; }
+    20% { transform: translateX(0) scale(1); }
+    82% { transform: translateX(0) scale(1); opacity: 1; }
+    100% { transform: translateX(-120%) scale(0.9); opacity: 0; }
+  }
+
+  @keyframes shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(200%); }
+  }
+
+  @keyframes bounce-short {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .animate-auction-slash {
+    animation: auction-slash 3.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-shine {
+    animation: shine 1.5s infinite;
+  }
+
+  .animate-bounce-short {
+    animation: bounce-short 1.5s ease-in-out infinite;
+  }
+
+  /* Smooth Chat Safety Tip Ping-Pong Marquee Animation */
+  @keyframes marquee-pingpong {
+    0%, 18% {
+      transform: translateX(0%);
+    }
+    82%, 100% {
+      transform: translateX(-52%);
+    }
+  }
+
+  .animate-marquee-pingpong {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee-pingpong 7s ease-in-out infinite alternate;
+    will-change: transform;
   }
 }

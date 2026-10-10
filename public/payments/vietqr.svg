@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <!-- VietQR dual triangle crest -->
+  <polygon points="18,18 30,18 24,28" fill="#005BAA"/>
+  <polygon points="26,24 38,24 32,34" fill="#ED1C24"/>
+  <polygon points="34,18 46,18 40,28" fill="#005BAA"/>
+  <!-- VietQR text -->
+  <text x="14" y="47" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="12" fill="#005BAA" letter-spacing="-0.5">Viet</text>
+  <text x="36" y="47" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="12" fill="#ED1C24" letter-spacing="-0.5">QR</text>
+  <!-- Mini QR indicator -->
+  <rect x="22" y="52" width="20" height="2" rx="1" fill="#005BAA" opacity="0.3"/>
+</svg>

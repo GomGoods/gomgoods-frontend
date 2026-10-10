@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="zlGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0068FF"/>
+      <stop offset="100%" stop-color="#00BED6"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#zlGrad)"/>
+  <!-- White inner badge for contrast and crisp branding -->
+  <rect x="6" y="16" width="52" height="32" rx="8" fill="#FFFFFF"/>
+  <!-- ZaloPay Typography -->
+  <!-- Zalo (Blue) -->
+  <text x="10" y="38" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="16" fill="#0068FF" letter-spacing="-0.5">Zalo</text>
+  <!-- Pay (Green) -->
+  <text x="44" y="38" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="13" fill="#00BE00" letter-spacing="-0.5">Pay</text>
+  <!-- Small dot accent -->
+  <circle cx="54" cy="24" r="2.5" fill="#00BE00"/>
+</svg>

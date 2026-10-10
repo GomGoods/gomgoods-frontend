@@ -1,1 +1,1 @@
-export function SellForm() { return <form>Sell product</form>; }
+export { SellView as SellForm } from "./SellView";

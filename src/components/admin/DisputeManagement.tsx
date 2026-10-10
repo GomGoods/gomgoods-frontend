@@ -1,1 +1,1 @@
-export function DisputeManagement() { return <section>Dispute management</section>; }
+export { DisputeList as DisputeManagement } from "./disputes/DisputeList";

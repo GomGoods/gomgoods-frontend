@@ -1,1 +1,1 @@
-export function AuctionManagement() { return <section>Auction management</section>; }
+export { AuctionList as AuctionManagement } from "./auctions/AuctionList";

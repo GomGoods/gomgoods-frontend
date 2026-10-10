@@ -1,1 +1,1 @@
-export function RefundRequest() { return <div>Refund request</div>; }
+export { RefundRequestModal as RefundRequest } from "@/components/orders/RefundRequestModal";
