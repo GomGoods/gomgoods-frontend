@@ -1,60 +1,85 @@
-# GomGoods
-GomGoods is a C2C marketplace for Pop-Culture & ACG goods, designed for users to discover, buy, sell, collect, and trade products within a community-driven marketplace.
+# GomGoods Frontend
 
-The platform supports both individual users selling personal items and dedicated store sellers, with features inspired by platforms such as Xianyu and Mercari.
+Frontend for **GomGoods**, a C2C marketplace focused on anime, manga, games, idol merchandise, and other pop-culture collectibles.
 
-## ✨ Features
-- 🛍️ **Marketplace** — Browse, search, filter, and discover Pop-Culture & ACG products.
-- 🛒 **Shopping** — Cart, checkout, payment, order management, and shipment tracking.
-- 🏪 **Store & Seller** — View seller/store profiles, reputation, listings, and reviews.
-- 📦 **Personal Selling** — Users can list and sell their own items.
-- 🔨 **Auction** — Create and participate in product auctions.
-- 💬 **Chat** — Communicate directly between buyers and sellers.
-- ⭐ **Collection & Reviews** — Save products and review completed transactions.
-- 🗣️ **Forum** — Community discussions, transaction warnings, recommendations, and reports.
-- 🎁 **Campaigns** — Participate in community campaigns and contributions.
-- 🛡️ **Dispute & Support** — Report transaction issues and receive support.
-- 🤖 **AI Support** — Assist users with common questions and transaction-related support.
+The platform supports both individual sellers and store owners, with features for discovering products, managing listings, communicating with buyers, and handling transactions.
 
-## 🛠️ Tech Stack
-| Technology | Purpose |
-|---|---|
-| Next.js | Frontend framework |
-| TypeScript | Type-safe development |
-| Tailwind CSS | Styling |
-| shadcn/ui | UI components |
+Built with Next.js, TypeScript, and Tailwind CSS.
 
-## 🎨 Design
-GomGoods focuses on a **compact, information-rich marketplace experience** inspired by existing C2C platforms while maintaining its own Pop-Culture & ACG identity.
+## Tech Stack
 
-The interface prioritizes:
-- Easy product discovery
-- Clear seller information and reputation
-- Efficient search and filtering
-- Compact marketplace layouts
-- Community interaction
-- Consistent and reusable UI components
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS, shadcn/ui
+- **API:** REST, Socket.IO
+- **Testing:** Vitest
 
-## 👥 Account Types
-GomGoods distinguishes between two types of selling entities:
-- **User** — A registered user who can purchase products and sell personal items.
-- **Store Seller** — A dedicated seller/store account operating as a storefront on the marketplace.
+## Features
 
-This distinction allows GomGoods to support both casual peer-to-peer selling and more established sellers.
+The frontend includes:
 
-## 🧩 Frontend Architecture
-The frontend follows a feature-oriented architecture based on Next.js App Router.
-The main responsibilities are separated between:
-- **Pages & Routes** — Application screens and navigation.
-- **Components** — Reusable UI and feature-specific components.
-- **Services** — Communication with backend APIs.
-- **Hooks** — Reusable React logic.
-- **Types** — Shared TypeScript definitions.
-- **Utilities** — Common helper functions and application logic.
-The frontend is designed to work independently from the backend through a defined API layer.
+- Product discovery, search, and filtering
+- Personal listings and store management
+- Shopping cart, checkout, and order tracking
+- Buyer–seller messaging
+- Community posts and discussions
+- Community campaigns and achievements
+- Product auctions
+- Image uploads and management
 
-## 🌿 Git Workflow
-Development follows a feature-branch workflow:
+Some features require the GomGoods backend and its supporting services.
+
+## Getting Started
+
+**Requirements:** Node.js 22.23.4 and npm.
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/Alight09004/gomgoods-frontend.git
+cd gomgoods-frontend
+npm ci
+```
+
+Configure the environment variables using the project's environment example, if available.
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The application runs at [http://localhost:3001](http://localhost:3001) with the current development configuration.
+
+## Project Structure
+
 ```text
-main
- └── feature/...
+src/
+├── app/          # Pages, layouts, and routes
+├── components/   # Reusable UI and feature components
+├── services/     # Backend API integration
+├── hooks/        # React hooks
+├── lib/          # Shared utilities and clients
+└── types/        # TypeScript types
+```
+
+## Development
+
+Run the available project checks:
+
+```bash
+npm test
+npm run lint
+npm run typecheck
+npm run build
+```
+
+For changes involving authenticated features, orders, or payments, use the isolated test environment rather than a development or production database.
+
+## Repository
+
+This repository contains the frontend application only. Backend services, database management, and payment processing are maintained separately.
+
+## License
+
+See [LICENSE](LICENSE) for the repository's licensing terms.
